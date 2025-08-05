@@ -12,6 +12,11 @@ func main() {
 	fmt.Println(intNum)
 
 	// unsigned int -> uint,  uint8, uint16, uint32, uint64
+	// Default Size of int and uint
+	// int and uint are platform-dependent:
+	// 32-bit system → 32 bits (4 bytes)
+	// 64-bit system → 64 bits (8 bytes)
+	// Go does this to match the native word size of the architecture for performance reasons.
 
 	//only float32 and float64 are there, not just float
 	var floatNum float64 = 32.87
@@ -43,4 +48,10 @@ func main() {
 
 	// const variables need to be declared when initialised and they cannot be assigned
 	// a new value later in the function
+
+	var myInt1 int = 16 // Explicit type declaration (int specified)
+	var myInt2 = 16     // Implicit type declaration (type inferred as int)
+	myInt3 := 16        // Short declaration, only allowed inside functions
+
+	fmt.Println(myInt1, myInt2, myInt3)
 }
